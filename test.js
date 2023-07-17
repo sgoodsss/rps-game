@@ -59,20 +59,17 @@ function win(userChoice, computerChoice) {
     result_p.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You win!!!`
 }
 
-function lose() {
+function lose(userChoice, computerChoice) {
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You win!!!`
+    result_p.innerHTML = `${convertToWord(userChoice)} loses to ${convertToWord(computerChoice)}. You lost :'(`
 }
 
-function tie () {
-    computerScore++;
-    userScore_span.innerHTML = userScore;
-    computerScore_span.innerHTML = computerScore;
-    result_p.innerHTML = `${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}. You win!!!`
+function tie (userChoice, computerChoice) {
+    result_p.innerHTML = `${convertToWord(userChoice)} equals ${convertToWord(computerChoice)}. It's a tie!`
 }
-}
+
 
 // Define game function
 // Game function needs to take in user input
